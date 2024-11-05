@@ -1,2 +1,2 @@
 # PW1
-Atividade de Programação Web.
+Atividades de Programação Web.
