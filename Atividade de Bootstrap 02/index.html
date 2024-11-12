@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<style>
+  .card {
+    width: 18rem;
+  }
+
+  .github-icon {
+    height: 40px;
+  }
+
+  a.nounderline {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+</style>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/lightbox.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark" id="home">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <i data-feather="circle" class="mb-1"></i>
+        Navbar
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#modal-section-title">Modal</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projetos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/marshfellow42/sistema-de-gestao">Sistema de Gestão</a></li>
+              <li><a class="dropdown-item" href="https://github.com/marshfellow42/Projeto_POO_Swing">Aplicativo de Clima</a></li>
+              <li><a class="dropdown-item" href="https://github.com/marshfellow42/SH1-Final-Score-Calculator">Calculadora SH1</a></li>
+              <li><a class="dropdown-item" href="https://github.com/marshfellow42/Jogo-de-Casino">Jogo de Cassino</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="btn btn-outline-warning" type="button" aria-label="Dark Mode Toggle" onclick="toggleDarkMode()">
+          <i data-feather="moon" class="dark-mode-toggle"></i>
+        </button>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme) {
+              document.documentElement.setAttribute("data-bs-theme", savedTheme);
+            }
+          });
+
+          function toggleDarkMode() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute("data-bs-theme");
+
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            html.setAttribute("data-bs-theme", newTheme);
+
+            localStorage.setItem("theme", newTheme);
+          }
+        </script>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="row px-md-5 align-items-start">
+    <div class="col-8">
+      <header>
+        <h1 class="text-center my-2">
+          Header
+        </h1>
+      </header>
+
+      <p class="text-start">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed tempus tellus. Morbi arcu dui, interdum in mattis suscipit, porta vel lorem. Fusce auctor urna et nisi tincidunt, et iaculis mi aliquet. Integer elementum leo nisl, at laoreet elit bibendum quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris non tellus a lacus sodales fermentum. Nam vehicula, libero ut suscipit gravida, diam lectus molestie lorem, eget tincidunt mi arcu et metus. Ut turpis nulla, consequat a malesuada id, bibendum sed magna. Nam diam erat, luctus sed velit ac, tincidunt volutpat eros. Donec fermentum ultricies urna a euismod. Morbi hendrerit mattis ante ac tincidunt.<br><br>
+
+        Mauris sed varius enim. Aliquam non est nibh. Mauris semper, ante nec tincidunt aliquam, neque risus venenatis felis, a gravida metus urna at nisi. Vivamus eu mattis magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque posuere venenatis tincidunt. Vestibulum quis tellus ut nisl scelerisque pretium. Sed ac odio iaculis, ultrices mi id, molestie lectus.<br><br>
+
+        Mauris id mi in tortor euismod lacinia. Pellentesque diam lectus, laoreet quis mollis sit amet, tristique ac lacus. Curabitur a consequat neque. Cras gravida pellentesque elit. Donec mattis lacus in nunc rutrum fermentum. Praesent et lacus malesuada, feugiat massa eget, tempor lectus. Sed maximus, est sed feugiat ultrices, libero tellus tempus nunc, ac vehicula mauris arcu eu arcu. Sed laoreet cursus lorem a pulvinar. Cras vestibulum dolor non enim sollicitudin, in iaculis felis elementum. Vivamus porta purus nisi, sit amet rutrum purus efficitur eget. Vestibulum non molestie ex. Proin in nisl accumsan ligula lobortis luctus vel ultrices nisi. Quisque interdum at dolor at bibendum. Proin rutrum nulla hendrerit, mollis velit at, facilisis ligula. Phasellus eget iaculis eros.<br><br>
+
+        Fusce aliquam nunc vitae enim pharetra dignissim. Cras ex lorem, elementum a massa vel, hendrerit fringilla dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut mi enim. Sed id dictum erat, eget finibus nunc. Duis in risus pulvinar, egestas neque finibus, congue arcu. Phasellus est ipsum, tempor nec molestie ut, interdum eget lacus. Morbi rutrum sit amet purus at tristique. Suspendisse pretium sed leo ultrices vestibulum. Vivamus commodo velit ipsum, non facilisis sem pharetra nec.<br><br>
+
+        In vehicula tellus turpis, ut sodales purus eleifend vitae. Cras eget elementum eros, sed tempus augue. In nec dignissim dui, in placerat ex. In vel fringilla ligula, et iaculis neque. Suspendisse sem justo, eleifend sit amet tortor vitae, dapibus malesuada purus. Praesent a risus neque. Aenean ac varius sem, et bibendum tellus. Suspendisse sed gravida ipsum. Nam eget ultrices ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus non ante at lacus dapibus aliquam sed a diam. Pellentesque pharetra nulla posuere, posuere erat at, aliquet urna.
+      </p>
+
+      <div class="row g-3 mb-4 needs-validation d-flex flex-column justify-content-center align-items-center">
+        <div class="section-title text-center" id="modal-section-title">
+          <h2>Modal</h2>
+          <p>Coloque seu nome abaixo</p>
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <form id="nameForm" class="needs-validation" novalidate>
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+              <div class="valid-feedback">
+                Parece ótimo!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, escolha um nome.
+              </div>
+            </div>
+
+            <br>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar
+            </button>
+          </form>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Bem-vindo!</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+          </tr>
+        </thead>
+        <tbody id="nameTableBody">
+          <!-- As linhas de nomes serão carregadas aqui -->
+        </tbody>
+      </table>
+
+      <script>
+        // Carregar os nomes salvos do localStorage ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+          loadNamesFromStorage();
+        });
+
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const form = event.target;
+
+          if (form.checkValidity()) {
+            const name = document.getElementById('name').value;
+            showNameInModal(name);
+            addNameToTable(name);
+            saveNameToStorage(name);
+            new bootstrap.Modal(document.getElementById('exampleModal')).show();
+            form.reset();  // Limpar o campo do formulário após o envio
+          } else {
+            form.classList.add('was-validated');
+          }
+        });
+
+        function showNameInModal(name) {
+          const modalBody = document.getElementById('modalBody');
+          modalBody.textContent = `Olá, ${name}! Bem-vindo ao nosso site.`;
+        }
+
+        function addNameToTable(name) {
+          const tableBody = document.getElementById('nameTableBody');
+          const rowCount = tableBody.rows.length + 1;
+
+          // Criar uma nova linha
+          const newRow = document.createElement('tr');
+
+          // Coluna com o número da linha
+          const cellIndex = document.createElement('th');
+          cellIndex.scope = 'row';
+          cellIndex.textContent = rowCount;
+
+          // Coluna com o nome inserido
+          const cellName = document.createElement('td');
+          cellName.textContent = name;
+
+          // Adicionar colunas à linha
+          newRow.appendChild(cellIndex);
+          newRow.appendChild(cellName);
+
+          // Adicionar a nova linha ao final do corpo da tabela
+          tableBody.appendChild(newRow);
+        }
+
+        function saveNameToStorage(name) {
+          let names = JSON.parse(localStorage.getItem('names')) || [];
+          names.push(name);
+          localStorage.setItem('names', JSON.stringify(names));
+        }
+
+        function loadNamesFromStorage() {
+          const names = JSON.parse(localStorage.getItem('names')) || [];
+          names.forEach(name => {
+            addNameToTable(name);
+          });
+        }
+      </script>
+
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-3">
+      <h1 class="text-center my-2">
+        Projetos
+      </h1>
+
+      <div class="d-flex flex-column justify-content-center align-items-center">
+
+        <div class="card mb-2">
+          <a href="dist/imagens/sistema-de-gestao.png" data-lightbox="gestao-website">
+              <img src="dist/imagens/sistema-de-gestao.png" class="card-img-top" alt="Aplicativo de Clima">
+          </a>
+          <a href="https://github.com/marshfellow42/sistema-de-gestao" class="nounderline">
+              <div class="card-body">
+                  <h5 class="card-title">Sistema de Gestão</h5>
+                  <p class="card-text">Um aplicativo de clima feito usando Java Swing. Utilizando a API do OpenWeatherMap, entre outras APIs que permitem uma experiência fluida.</p>
+              </div>
+          </a>
+        </div>
+
+        <div class="card mb-2">
+          <a href="dist/imagens/aplicativo-de-clima.png" data-lightbox="clima-app">
+            <img src="dist/imagens/aplicativo-de-clima.png" class="card-img-top" alt="Aplicativo de Clima">
+          </a>
+          <a href="https://github.com/marshfellow42/Projeto_POO_Swing" class="nounderline">
+            <div class="card-body">
+              <h5 class="card-title">Aplicativo de Clima</h5>
+              <p class="card-text">Um aplicativo de clima feito usando Java Swing. Utilizando a API do OpenWeatherMap, entre outras APIs que permitem uma experiência fluida.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card mb-2">
+          <a href="dist/imagens/sh1-calc.png" data-lightbox="calc-app">
+            <img src="dist/imagens/sh1-calc.png" class="card-img-top" alt="Calculadora para o rank final do jogo Silent Hill 1">
+          </a>
+          <a href="https://github.com/marshfellow42/SH1-Final-Score-Calculator" class="nounderline">
+            <div class="card-body">
+              <h5 class="card-title">Calculadora para o rank final do jogo Silent Hill 1</h5>
+              <p class="card-text">Uma calculadora feita usando Java Swing que serve para calcular o rank final do jogo para saber se você conseguiu o rank necessário para 10 estrelas onde você consegue uma arma poderosa.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card mb-2">
+          <a href="dist/imagens/jogo-de-cassino.png" data-lightbox="cassino-app">
+            <img src="dist/imagens/jogo-de-cassino.png" class="card-img-top" alt="Jogo de Cassino">
+          </a>
+          <a href="https://github.com/marshfellow42/Jogo-de-Casino" class="nounderline">
+            <div class="card-body">
+              <h5 class="card-title">Jogo de Cassino</h5>
+              <p class="card-text">Meu primeiro projeto "sério" em um jogo feito em Python, baseado em texto com vários finais engraçados e levemente controvérsios.</p>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="p-3 mt-4 bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+          <a href="#home" class="btn btn-primary">Início</a>
+
+          &nbsp;&nbsp;&nbsp;
+
+          <a href="https://github.com/marshfellow42">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" class="github-icon btn btn-outline-secondary" alt="GitHub Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+<script src="dist/js/feather.min.js"></script>
+<script>
+  feather.replace();
+</script>
