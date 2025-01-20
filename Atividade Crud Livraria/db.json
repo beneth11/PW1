@@ -1,0 +1,40 @@
+{
+    "db": [
+        {
+            "id": 1,
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "editora": "Companhia das Letras",
+            "ano": 2009,
+            "quant": 20,
+            "preco": 19.00
+        },
+        {
+            "id": 2,
+            "titulo": "Revolução dos Porcos",
+            "autor": "George Orwell",
+            "editora": "Companhia das Letras",
+            "ano": 2007,
+            "quant": 5,
+            "preco": 40.00
+        },
+        {
+            "id": 3,
+            "titulo": "48 Leis do Poder",
+            "autor": "Robert Greene",
+            "editora": "Viking Press",
+            "ano": 1998,
+            "quant": 300,
+            "preco": 50.00
+        },
+        {
+            "id": 4,
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "editora": "Ulisseia",
+            "ano": 1955,
+            "quant": 0,
+            "preco": 100.00
+        }
+    ]
+}
