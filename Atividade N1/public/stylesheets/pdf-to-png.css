@@ -1,0 +1,21 @@
+#dragArea {
+  border: 2px dashed #007bff;
+  padding: 50px;
+  text-align: center;
+  background-color: #f8f9fa;
+  min-height: 200px;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+/* Update for the PNG preview */
+#pngPreview img {
+  max-width: 80%; /* Prevents the image from using the full width of its container */
+  max-height: 400px; /* Optional: limits the height of the preview */
+  width: auto; /* Automatically scales the width to preserve the aspect ratio */
+  height: auto; /* Ensures the height scales proportionally */
+  margin: 0 auto; /* Centers the image horizontally */
+  display: block; /* Ensures the image is displayed as a block element */
+}
