@@ -1,0 +1,92 @@
+<%- include('../partials/header') %>
+
+<link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.min.css"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/buttons/3.2.1/css/buttons.bootstrap5.min.css"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.bootstrap5.min.css"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/colreorder/2.0.4/css/colReorder.bootstrap5.min.css"
+/>
+
+<div class="container-fluid vh-100">
+    <%- include('../partials/topbar') %>
+
+    <table class="table table-striped nowrap" style="width: 100%" id="myTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apelido</th>
+                <th>Senha</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.passwordHash %></td>
+                    <td>
+                        <form action="/users/delete/<%= user.id %>" method="POST" style="display: inline">
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">
+                                <i class="bi bi-trash-fill"></i> Excluir
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.1/js/buttons.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.1/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.bootstrap5.min.js"></script>
+
+<script type="text/javascript">
+    new DataTable("#myTable", {
+        responsive: true,
+        layout: {
+            topStart: {
+                buttons: ["excel", "pdf", "colvis"],
+            },
+        },
+        stateSave: true,
+        language: {
+            url: "https://cdn.datatables.net/plug-ins/2.2.1/i18n/pt-BR.json",
+        },
+    });
+</script>
+
+<script>
+    const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+    );
+    const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+    );
+
+    const popover = new bootstrap.Popover(".popover-dismiss", {
+        trigger: "focus",
+    });
+</script>
+
+<%- include('../partials/footer') %>
