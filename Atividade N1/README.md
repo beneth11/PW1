@@ -1,6 +1,6 @@
 # Atividade N1
 
-Lista de Afazeres:
+Lista de tarefas:
 
 O aplicativo de lista de tarefas é um aplicativo web que permite aos usuários criar e gerenciar uma lista de tarefas. A interface do usuário consiste em um formulário para adicionar novas tarefas, uma lista de todas as tarefas e controles para marcar tarefas como concluídas ou excluí-las.
 
